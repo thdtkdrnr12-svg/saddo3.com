@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>텔레그램으로 이동 중...</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f9fa;
+      color: #333;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: #666;
+    }
+
+    /* 로딩 스피너 */
+    .spinner {
+      border: 6px solid #e0e0e0;
+      border-top: 6px solid #007bff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* 버튼 스타일 */
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+
+  <script>
+    // 
+    const telegramLink = "https://t.me/+Qvj1aGzjBpc5NmNl";
+
+    // 2초 뒤 자동 이동
+    setTimeout(() => {
+      window.location.href = telegramLink;
+    }, 2000);
+
+    // 수동 이동 함수
+    function goToTelegram() {
+      window.location.href = telegramLink;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="spinner"></div>
+  <h1>텔레그램으로 이동 중...</h1>
+  <p>잠시만 기다려주세요. 자동으로 이동하지 않으면 아래 버튼을 눌러주세요.</p>
+  <button onclick="goToTelegram()">텔레그램으로 이동하기</button>
+</body>
+</html>
